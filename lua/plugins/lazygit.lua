@@ -1,5 +1,6 @@
 --[[
-	TUI для работы с git-ом
+	desc: TUI для работы с git-ом
+	repo: https://github.com/kdheepak/lazygit.nvim
 --]]
 
 return {

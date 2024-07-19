@@ -1,8 +1,10 @@
 --[[
-	Табы
+	desc: Табы
+	repo: https://github.com/akinsho/bufferline.nvim
+
+ 	TODO настроить возможность навигации, открытие/закрытия табов по хоткеям
 --]]
 
--- TODO настроить возможность навигацию по хоткеям и открытие табов по специальному хоткею
 return {
  	"akinsho/bufferline.nvim",
  	version = "*",

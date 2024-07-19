@@ -1,7 +1,8 @@
 --[[
-  Движок автодополнения для LSP
+	desc: Движок автодополнения для LSP
+	repo: https://github.com/hrsh7th/nvim-cmp
 --]]
---
+
 return {
 	"hrsh7th/nvim-cmp",
 	dependencies = {

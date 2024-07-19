@@ -1,8 +1,8 @@
 --[[
-	Файловое древо
+	desc: Файловое древо
+	repo: https://github.com/nvim-tree/nvim-tree.lua
 --]]
 
--- TODO настроить символов гита
 return {
 	"nvim-tree/nvim-tree.lua",
 	version = "*",
@@ -17,21 +17,33 @@ return {
 		require("nvim-tree").setup({
 			view = {
 				side = "right",
+      			width = 60,
 			},
 			renderer = {
   	      		icons = {
   	        		glyphs = {default = "‣ "},
   	      		},
 				highlight_git = true,
-				special_files = {"README.md", "Makefile", "MAKEFILE"},
+				special_files = {
+					"README.md",
+					"Makefile",
+					"MAKEFILE",
+					"go.mod",
+					"go.sum",
+				},
 				indent_markers = {
 					enable = true
 				}
 			},
 			filters = {
 				enable = true,
-				dotfiles = true,
-				custom = {"node_modules", ".cache"},
+				dotfiles = false,
+				custom = {
+					"node_modules",
+					".cache",
+					"pkg",
+					"pb",
+				},
 				exclude = {},
 			},
   	  		open_on_tab = true

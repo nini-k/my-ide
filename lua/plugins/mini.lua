@@ -1,6 +1,9 @@
 --[[
 	Различный набор плагинов с небольшими хелперами
+
+	repo: https://github.com/echasnovski/mini.nvim
 --]]
+
 return {
 	"echasnovski/mini.nvim",
 	branch = "stable",

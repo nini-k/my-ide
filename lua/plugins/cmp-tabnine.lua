@@ -1,5 +1,8 @@
 --[[
-	AI для автокомплита
+	desc: AI для автокомплита
+	repo: https://github.com/tzachar/cmp-tabnine
+
+	TODO удостоверится, что ai работает
 --]]
 
 return {

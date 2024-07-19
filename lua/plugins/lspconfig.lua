@@ -1,5 +1,6 @@
 --[[
-	Конфигурация модуля Neovim-а для работы LSP
+	desc: Конфигурация модуля Neovim-а для работы LSP
+	repo: https://github.com/neovim/nvim-lspconfig
 --]]
 
 local user = {}

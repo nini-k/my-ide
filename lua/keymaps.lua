@@ -1,5 +1,5 @@
 --[[
-	Настройка и переопределение хоткеев vim-а
+	desc: Настройка и переопределение хоткеев vim-а
 --]]
 
 local map  = vim.api.nvim_set_keymap         -- set global keymap

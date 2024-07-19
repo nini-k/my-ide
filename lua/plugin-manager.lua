@@ -1,5 +1,5 @@
 --[[
-	Плагин менеджер
+	desc: Плагин менеджер
     repo: https://github.com/folke/lazy.nvim
 --]]
 

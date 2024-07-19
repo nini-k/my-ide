@@ -1,5 +1,5 @@
 --[[
-	Настройка и переодпределение команд
+	desc: Настройка и переодпределение команд
 --]]
 
 local group = vim.api.nvim_create_augroup('user_cmds', {clear = true})

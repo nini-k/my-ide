@@ -1,5 +1,5 @@
 --[[
-	Базовые настройки vim-a
+	desc: Базовые настройки vim-a
 
 	use :help 'option_name' command
 	For example, :help 'hlsearch'

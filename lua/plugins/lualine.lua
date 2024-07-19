@@ -1,5 +1,6 @@
 --[[
-	Нижняя панель
+	desc: Нижняя панель
+	repo: https://github.com/nvim-lualine/lualine.nvim
 --]]
 
 return {

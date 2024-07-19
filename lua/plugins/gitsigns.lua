@@ -1,8 +1,10 @@
--- [[
--- Git blame и красивое отображение изменений строк в файле
--- ]]
+--[[
+	desc: Git blame и красивое отображение изменений строк в файле
+	repo: https://github.com/lewis6991/gitsigns.nvim
 
--- TODO настроить навигацию в файле по диффу
+	TODO настроить навигацию, rollback, просмотр в файле по диффу
+--]]
+
 return {
 	"lewis6991/gitsigns.nvim",
 	event = "VeryLazy",
@@ -26,7 +28,7 @@ return {
   		},
   		signs_staged_enable = true,
   		signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
-  		numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
+  		numhl      = true,  -- Toggle with `:Gitsigns toggle_numhl`
   		linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
   		word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
   		watch_gitdir = {
