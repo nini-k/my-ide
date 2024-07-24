@@ -74,24 +74,29 @@ return {
   		vim.api.nvim_create_autocmd("LspAttach", {
   		  group = group,
   		  desc = "LSP actions",
-  		  callback = user.on_attach
+  		  callback = require("plugins.lsp.custom").on_attach,
   		})
 
   		-- See :help mason-lspconfig-settings
   		require("mason-lspconfig").setup({
   	  		handlers = {
-  	    	-- See :help mason-lspconfig-dynamic-server-setup
-  	    	function(server)
-  	      		-- See :help lspconfig-setup
-  	      		lspconfig[server].setup({
-  	        		capabilities = lsp_capabilities,
-  	      		})
-  	    	end,
-  	    	["lua_ls"] = function()
-  	      		-- if you install the language server for lua it will
-  	      		-- load the config from lua/plugins/lsp/lua_ls.lua
-				require('plugins.lsp.lua_ls')
-  	  		end
+  	    		-- See :help mason-lspconfig-dynamic-server-setup
+  	    		function(server)
+  	      			-- See :help lspconfig-setup
+  	      			lspconfig[server].setup({
+  	        			capabilities = lsp_capabilities,
+  	      			})
+  	    		end,
+  	    		["lua_ls"] = function()
+  	      			-- if you install the language server for lua it will
+  	      			-- load the config from lua/plugins/lsp/lua_ls.lua
+					require('plugins.lsp.lua_ls')
+  	  			end,
+				["gopls"] = function()
+  	      			-- if you install the language server for lua it will
+  	      			-- load the config from lua/plugins/lsp/lua_ls.lua
+					require('plugins.lsp.gopls')
+  	  			end,
   	  		}
   		})
 	end,

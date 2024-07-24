@@ -8,8 +8,8 @@ return {
 	main = "nvim-treesitter.configs",
 	-- See :help nvim-treesitter-modules
 	opts = {
-  		auto_install = true,
-  		highlight = {enable = true},
+		auto_install = true,
+		highlight = { enable = true },
 		ensure_installed = {
 			"go",
 			"yaml",

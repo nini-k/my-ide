@@ -24,7 +24,7 @@ return {
 		{"<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>"}, -- Search fuzzy search in current file
 	},
 	config = function()
-		local actions = require("telescope.actions")
+		--local actions = require("telescope.actions")
 
 		require("telescope").setup{
   			defaults = {
@@ -47,11 +47,11 @@ return {
 					"mocks/",
 					"%_mock.go",
 				},
-    			mappings = {
-      				i = {
-        				["q"] = actions.close
-      				},
-    			},
+    			--mappings = {
+      			--	i = {
+        		--		["q"] = actions.close
+      			--	},
+    			--},
 			}
 		}
 

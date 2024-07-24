@@ -38,3 +38,4 @@ o.number        = true
 o.signcolumn    = 'yes'
 o.wrap          = false
 o.expandtab     = false
+cmd.highlight('Normal guibg=none ctermbg=none')

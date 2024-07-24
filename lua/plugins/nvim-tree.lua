@@ -17,12 +17,12 @@ return {
 		require("nvim-tree").setup({
 			view = {
 				side = "right",
-      			width = 60,
+				width = 60,
 			},
 			renderer = {
-  	      		icons = {
-  	        		glyphs = {default = "‣ "},
-  	      		},
+				icons = {
+					glyphs = { default = "‣ " },
+				},
 				highlight_git = true,
 				special_files = {
 					"README.md",
@@ -46,7 +46,7 @@ return {
 				},
 				exclude = {},
 			},
-  	  		open_on_tab = true
-  		})
+			open_on_tab = true
+		})
 	end,
 }

@@ -2,6 +2,26 @@
 	desc: Настройка и переодпределение команд
 --]]
 
-local group = vim.api.nvim_create_augroup('user_cmds', {clear = true})
-
 vim.api.nvim_create_user_command('ReloadConfig', 'source $MYVIMRC', {})
+
+-- Для работы прозрачности в терминале alacritty
+vim.api.nvim_create_autocmd('ColorScheme', {
+	callback = function()
+    	local highlights = {
+    	  'Normal',
+    	  'LineNr',
+    	  'Folded',
+    	  'NonText',
+    	  'SpecialKey',
+    	  'VertSplit',
+    	  'SignColumn',
+    	  'EndOfBuffer',
+    	  'TablineFill', -- this is specific to how I like my tabline to look like
+    	}
+    	for _, name in pairs(highlights) do vim.cmd.highlight(name .. ' guibg=none ctermbg=none') end
+	end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+	command = "lua vim.lsp.buf.format()"
+})
