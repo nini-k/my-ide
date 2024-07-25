@@ -19,6 +19,9 @@ return {
 				side = "right",
 				width = 60,
 			},
+			update_focused_file = {
+				enable = true,
+			},
 			renderer = {
 				icons = {
 					glyphs = { default = "‣ " },

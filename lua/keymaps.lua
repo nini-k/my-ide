@@ -6,11 +6,11 @@ local map   = vim.api.nvim_set_keymap           -- set global keymap
 local g     = vim.g                             -- global variables
 local opts  = { noremap = true, silent = true } -- keymap options
 
-g.mapleader = ","                            -- rebind <Leader> key
+g.mapleader = ","                               -- rebind <Leader> key
 
-map("n", "<leader>e", ":wq<cr>", opts)       -- quick quit command
-map("n", "<leader>E", ":qa!<cr>", opts)      --
-map("n", "<leader>WE", ":wqa<cr>", opts)     --
+map("n", "<leader>e", ":wq<cr>", opts)          -- quick quit command
+map("n", "<leader>E", ":qa!<cr>", opts)         --
+map("n", "<leader>WE", ":wqa<cr>", opts)        --
 
 -- split nav
 map("n", "<C-J>", "<C-W><C-J>", opts) -- bind easier split navigations
@@ -48,7 +48,9 @@ map("i", "<leader>w", "<C-s>:w<cr>", opts) --
 map("i", "kk", "<Esc>", opts)              -- press kk to exit
 
 -- don"t use arrow keys
-map("", "<up>", "<nop>", opts)    --
-map("", "<down>", "<nop>", opts)  --
-map("", "<left>", "<nop>", opts)  --
-map("", "<right>", "<nop>", opts) --
+map("", "<up>", "<nop>", opts)            --
+map("", "<down>", "<nop>", opts)          --
+map("", "<left>", "<nop>", opts)          --
+map("", "<right>", "<nop>", opts)         --
+
+map("n", "cp", ':CopyFullPath<cr>', opts) -- command implemented commands.lua
