@@ -20,6 +20,7 @@ function M.on_attach(event)
 	bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', 'Show line diagnostic')
 	bufmap('n', 'gE', '<cmd>lua vim.diagnostic.goto_prev()<cr>', 'Previous diagnostic')
 	bufmap('n', 'ge', '<cmd>lua vim.diagnostic.goto_next()<cr>', 'Next diagnostic')
+	bufmap('n', 'rr', '<cmd>lua vim.lsp.buf.rename()<cr>', 'Rename references')
 end
 
 return M
