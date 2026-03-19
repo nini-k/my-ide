@@ -15,7 +15,31 @@ lspconfig.gopls.setup {
 			usePlaceholders = true,
 			analyses = {
 				unusedparams = true,
+				fillreturns = true,
+				fillstruct = true,
 			},
-		}
+		},
 	},
 }
+
+
+vim.keymap.set("n", "<leader>fs", function()
+	vim.lsp.buf.code_action {
+		filter = function(x)
+			return x.kind == "refactor.rewrite.fillStruct"
+		end,
+	}
+end, {
+	buffer = true,
+})
+
+vim.keymap.set("n", "<leader>fS", function()
+	vim.lsp.buf.code_action {
+		apply = true,
+		filter = function(x)
+			return x.kind == "refactor.rewrite.fillStruct"
+		end,
+	}
+end, {
+	buffer = true,
+})

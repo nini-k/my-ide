@@ -14,4 +14,5 @@ load('commands')
 load('keymaps')
 require('plugin-manager')
 
-vim.cmd.colorscheme "gruvbox"
+vim.o.background = "dark" -- or "ligth" for light mode
+vim.cmd([[colorscheme gruvbox]])
