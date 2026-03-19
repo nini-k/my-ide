@@ -35,3 +35,36 @@ vim.api.nvim_create_user_command("CopyFullPath", function()
 	end,
 	{}
 )
+
+-- Копирование ссылки строки в GitLab
+vim.api.nvim_create_user_command("CopyGitLabLink", function()
+		local file_path = vim.fn.expand("%:.")
+		if file_path == "" then
+			vim.notify("No file path found", vim.log.levels.ERROR)
+			return
+		end
+
+		local remote_url = vim.fn.system("git remote get-url origin"):gsub("%s+", "")
+		if remote_url == "" then
+			vim.notify("No git remote found", vim.log.levels.ERROR)
+			return
+		end
+
+		local domain = remote_url:match("git@([^:]+):")
+		if domain then
+			remote_url = "https://" .. domain .. "/" .. remote_url:gsub("git@[^:]+:", ""):gsub("%.git$", "")
+		else
+			remote_url = remote_url:gsub("%.git$", "")
+		end
+
+		local branch = vim.fn.system("git branch --show-current"):gsub("%s+", "")
+		if branch == "" then
+			branch = "main"
+		end
+
+		local gitlab_link = remote_url .. "/-/blob/" .. branch .. "/" .. file_path .. "#L" .. vim.fn.line(".")
+		vim.fn.setreg("+", gitlab_link)
+		vim.notify('Copied GitLab link: ' .. gitlab_link)
+	end,
+	{}
+)

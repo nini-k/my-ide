@@ -54,3 +54,4 @@ map("", "<left>", "<nop>", opts)          --
 map("", "<right>", "<nop>", opts)         --
 
 map("n", "cp", ':CopyFullPath<cr>', opts) -- command implemented commands.lua
+map("n", "cg", ':CopyGitLabLink<cr>', opts) -- copy GitLab link
